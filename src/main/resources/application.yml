@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: todolist
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/todolist_db
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+security:
+  jwt:
+    secret-key: ${SECURITY_JWT_SECRET_KEY:a6b1ba202d33b57a23bfb7aa4d888f566bacb155eb789a2c35b5dd749cfe9308}
+    expiration-time: ${SECURITY_JWT_EXPIRATION_TIME:3600000}
+logging:
+  level:
+    web: trace
