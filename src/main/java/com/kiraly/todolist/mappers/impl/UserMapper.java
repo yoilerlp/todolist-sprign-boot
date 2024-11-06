@@ -22,4 +22,9 @@ public class UserMapper implements Mapper<UserEntity, UserDto> {
     public UserEntity mapFrom(UserDto userDto) {
         return modelMapper.map(userDto, UserEntity.class);
     }
+
+    @Override
+    public UserEntity merge(UserDto origin, UserEntity destination) {
+        return null;
+    }
 }
